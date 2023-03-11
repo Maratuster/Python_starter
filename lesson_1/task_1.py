@@ -14,4 +14,5 @@
 username = input('Введите ваше имя: ')
 password = input('Введите ваше пароль: ')
 birth_date = input('Введите ваше дату рождения: ')
-print(f'Ваши данные для входа в аккаунт: имя - {username}, пароль - {password}, дата рождения - {birth_date}')
+print(
+    f'Ваши данные для входа в аккаунт: имя - {username}, пароль - {password}, дата рождения - {birth_date}')
