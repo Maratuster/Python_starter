@@ -6,24 +6,20 @@
 """
 import random
 value_x, value_y = random.randint(0, 1000), random.randint(0, 1000)
-print(value_x, value_y)
+summ_xy, product_xy = value_x+value_y, value_x*value_y
 print(
-    f"Петя загадал два числа - X и Y.\nСумма чисел равна {value_x+value_y}, а произведение равно {value_x*value_y}.\nУгадай числа.")
+    f"Петя загадал два числа - X и Y.\nСумма чисел равна {summ_xy}, а произведение равно {product_xy}.\nУгадай числа.")
 
 
-def give_answer():
-    try:
-        answer = int(input())
-    except Exception:
-        print("Вы ввели не число. Попробуйте ещё раз.")
-        give_answer()
-    return
-
-print('Чему равно число X?')
-answer_x = give_answer()
-print('Чему равно число Y?')
-answer_y = give_answer()
-if value_x == answer_x and value_y == answer_y:
-    print('Всё верно! Поздравляю!')
-else:
-    print('Не верно. Попробуй ещё раз')
+"""
+Найдём числа по формуле (СуммаЧисел - X) = (ПроизведениеЧисел / X)
+Число Х будем подбирать в цикле начиная с 1.
+"""
+answer_x = 1
+answer_y = 0
+while True:
+    if summ_xy-answer_x ==  product_xy / answer_x:
+        answer_y = summ_xy-answer_x
+        break
+    else: answer_x += 1
+print(f'Наш алгоритм помог найти Кате числа.\nПервое число равно {answer_x}, второе число равно {answer_y}')
