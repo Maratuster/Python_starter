@@ -50,4 +50,4 @@ def score_counter(word_list):
 
 user_word = list(input("Введите слово: ").upper())
 print(user_word)
-print(score_counter(user_word))
+print(f"Вы набрали {score_counter(user_word)} очков")
