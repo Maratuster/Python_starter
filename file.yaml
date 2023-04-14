@@ -1,0 +1,9 @@
+dict_key:
+  first_key: 12Ţ
+  second_key: 15Ò
+  third_key: 8ʏ
+int_key: 124
+list_key:
+- name
+- surname
+- thirdname
